@@ -1,88 +1,90 @@
 configuration {
-    font: "SF Mono Medium 11";
-    show-icons: true;
-    terminal: "alacritty";
-    drun-display-format: "{name}";
+font: "SF Mono Medium 11";
+      show-icons: true;
+terminal: "alacritty";
+          drun-display-format: "{name}";
 }
 
 @theme "/dev/null"
 
 * {
-    /* Alacritty Default Palette */
-    bg: #181818;
-    fg: #d8d8d8;
-    accent: #6a9fb5;
-    selected-bg: #282828;
-    selected-fg: #6a9fb5;
-    border-color: #6a9fb5;
-    separator-color: #456877;
-    placeholder-color: #828482;
+  /* Alacritty Default Palette */
+bg: #181818e6;            
+border-color: #d8d8d8;   
+separator-color: #3a3a3a;
+fg: #d8d8d8;
+accent: #6a9fb5;
+        selected-bg: #282828;
+        selected-fg: #6a9fb5;
+        border-color: #6a9fb5;
+        separator-color: #456877;
+        placeholder-color: #828482;
 
-    background-color: transparent;
-    text-color: @fg;
-    margin: 0;
-    padding: 0;
+        background-color: transparent;
+        text-color: @fg;
+margin: 0;
+padding: 0;
 }
 
 window {
-    location: center;
-    anchor: center;
-    width: 600px;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: @border-color;
-    background-color: @bg;
-    padding: 15px;
+location: center;
+anchor: center;
+width: 600px;
+border: 1px solid;
+        border-radius: 8px;
+        border-color: @border-color;
+        background-color: @bg;
+padding: 15px;
 }
 
 inputbar {
-    children: [ prompt, entry, num-filtered-rows, textbox-slash, num-rows ];
-    padding: 6px 8px;
-    background-color: transparent;
-    margin: 0 0 8px 0;
+children: [ prompt, entry, num-filtered-rows, textbox-slash, num-rows ];
+padding: 6px 8px;
+         background-color: transparent;
+margin: 0 0 8px 0;
 }
 
 prompt {
-    text-color: @accent;
-    padding: 0 8px 0 0;
+  text-color: @accent;
+padding: 0 8px 0 0;
 }
 
 entry {
-    text-color: @fg;
-    placeholder: "Type to filter";
-    placeholder-color: @placeholder-color;
+  text-color: @fg;
+placeholder: "Type to filter";
+             placeholder-color: @placeholder-color;
 }
 
 num-filtered-rows, num-rows, textbox-slash {
-    text-color: @placeholder-color;
+  text-color: @placeholder-color;
 }
 
 textbox-slash {
-    expand: false;
-    str: "/";
+expand: false;
+str: "/";
 }
 
 listview {
-    lines: 15;
-    columns: 1;
-    spacing: 2px;
-    fixed-height: false;
-    border: 1px 0px 0px 0px;
-    border-color: @separator-color;
-    padding: 8px 0px 0px 0px;
+lines: 15;
+columns: 1;
+spacing: 2px;
+         fixed-height: false;
+border: 1px 0px 0px 0px;
+        border-color: @separator-color;
+padding: 8px 0px 0px 0px;
 }
 
 element {
-    padding: 4px 8px;
-    border-radius: 4px;
+padding: 4px 8px;
+         border-radius: 4px;
 }
 
 element selected {
-    background-color: @selected-bg;
-    text-color: @selected-fg;
+  background-color: @selected-bg;
+  text-color: @selected-fg;
 }
 
 element-text {
-    text-color: inherit;
-    vertical-align: 0.5;
+  text-color: inherit;
+  vertical-align: 0.5;
 }
